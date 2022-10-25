@@ -50,13 +50,14 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/text_Contra">
+            app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/EditPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
+                android:hint="@string/text_Contra"
                 android:textSize="50dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
