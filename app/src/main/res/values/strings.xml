@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">APP</string>
+    <string name="text_name">Name</string>
+    <string name="text_lastname">LastName</string>
+    <string name="text_Nit">Nit</string>
+    <string name="text_Email">Email</string>
+    <string name="text_Phone">Phone</string>
+    <string name="text_Register">register user</string>
+    <string name="text_Login">Login in</string>
+    <string name="text_Contra">Password</string>
+    <string name="introductions">Introduction</string>
+    <string name="text_introduction">Welcome to cineview, with our service you can have access to rent movies and exclusive series of contemporary cinema to enjoy at home or from anywhere</string>
+    <string name="properties">Suscription</string>
+    <string name="text_properties">And thanks to our premium subscription, you can enjoy more than 100 movies for a limited period of time, and with the platinum subscription you can do it indefinitely.</string>
+    <string name="text_welcome">Welcome</string>
+    <string name="user">Camilo</string>
+</resources>

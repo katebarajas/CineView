@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">APLICACION</string>
+    <string name="text_name">Nombre</string>
+    <string name="text_lastname">Apellido</string>
+    <string name="text_Nit">Documento</string>
+    <string name="text_Email">Gmail</string>
+    <string name="text_Phone">Telefono</string>
+    <string name="text_Register">Registrar Usuario</string>
+    <string name="text_Login">Iniciar Sesion</string>
+    <string name="text_Contra">Contraseña</string>
+    <string name="introductions">Descripción</string>
+    <string name="text_introduction">Bienvenido a cineview, con nuestro servicio usted podrá tener acceso a la renta de películas y series exclusivas del cine contemporáneo para disfrutar en casa o desde donde sea</string>
+    <string name="properties">Suspcrición</string>
+    <string name="text_properties">Y gracias a nuestra suscripción premium, podrá disfrutar mas de 100 películas por un periodo de tiempo limitado, y con la suscripción platinum podrá hacerlo de manera indefinida.</string>
+    <string name="text_welcome">Bienvenido</string>
+    <string name="user">Camilo</string>
+</resources>
