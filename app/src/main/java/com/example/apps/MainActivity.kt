@@ -16,7 +16,6 @@ import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
 
-/* prueba */
     private var edName: EditText?=null
     private var edLastname: EditText?=null
     private var edNit: EditText?=null
@@ -27,8 +26,15 @@ class MainActivity : AppCompatActivity() {
     private val text_Pattern: Pattern = Pattern.compile("[a-zA-Z]*")
     private val email_Pattern: Pattern = Patterns.EMAIL_ADDRESS
     private val password_Pattern: Pattern = Pattern.compile(
-        "^"+"(?=.*[0-9])"+".{8,}"+"$"
-    )
+        "^" + "[a-zA-Z]*" +
+                "(?=.*[0-9])" +
+                "(?=.*[@#\$%^&+=.])"+
+                ".{8,}" +
+                "$")
+    private val nit_pattern : Pattern=Pattern.compile(
+        "[0-9]*"+".{6,}")
+    private val phone_pattern : Pattern=Pattern.compile(
+        "[0-9]*"+".{10,}")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,10 +51,10 @@ class MainActivity : AppCompatActivity() {
     fun onRegistrar(view: View) {
         if (ValidateForm())
         {
-            Toast.makeText(this,"correcto", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,getString(R.string.alert_register_right), Toast.LENGTH_LONG).show()
         }
         else{
-            Toast.makeText(this,"error", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Error", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -56,6 +62,8 @@ class MainActivity : AppCompatActivity() {
         var validate=true
         val nameInput=edName!!.text.toString()
         val lastnameInput=edLastname!!.text.toString()
+        val nitInput=edNit!!.text.toString()
+        val phoneInput=edPhone!!.text.toString()
         val passwordInput=edPassword!!.text.toString()
         val emailInput=edEmail!!.text.toString()
         if (!chBPolicies!!.isChecked)
@@ -69,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             validate=false
         }else if(!text_Pattern.matcher(nameInput.replace(" ","")).matches())
         {
-            edName!!.error="nombre no valido"
+            edName!!.error=getString(R.string.alert_register_name)
             validate=false
         }else edName!!.error=null
 /////////////////APELLIDO///////////////////////////
@@ -77,22 +85,21 @@ class MainActivity : AppCompatActivity() {
         {
             edLastname!!.error=getString(R.string.alert_requerid)
             validate=false
-        }else if(!text_Pattern.matcher(nameInput.replace(" ","")).matches())
+        }else if(!text_Pattern.matcher(lastnameInput.replace(" ","")).matches())
         {
-            edLastname!!.error="nombre no valido"
+            edLastname!!.error=getString(R.string.alert_register_lastname)
             validate=false
         }else edLastname!!.error=null
 ///////////////NIT///////////////////////////
-        if  (TextUtils.isEmpty(edNit!!.text.toString()))
+        if(TextUtils.isEmpty(edNit!!.text.toString()))
         {
-            edNit!!.error=getString(R.string.alert_requerid)
+            edNit!!.error="Required"
             validate=false
-        }else if(!text_Pattern.matcher(nameInput.replace(" ","")).matches())
+        }else if(!nit_pattern.matcher(nitInput.replace(" ", "")).matches())
         {
-            edNit!!.error="nombre no valido"
+            edNit!!.error="Invalid Nit"
             validate=false
         }else edNit!!.error=null
-
 //////////////////CORREO/////////////////////////////////////////
         if  (TextUtils.isEmpty(edEmail!!.text.toString()))
         {
@@ -100,7 +107,7 @@ class MainActivity : AppCompatActivity() {
             validate=false
         }else if(!email_Pattern.matcher(emailInput).matches())
         {
-            edEmail!!.error="Correo no valido"
+            edEmail!!.error=getString(R.string.alert_register_email)
             validate=false
         }else edEmail!!.error=null
 ///////////////TELEFONO///////////////////////////
@@ -108,9 +115,9 @@ class MainActivity : AppCompatActivity() {
         {
             edPhone!!.error=getString(R.string.alert_requerid)
             validate=false
-        }else if(!text_Pattern.matcher(nameInput.replace(" ","")).matches())
+        }else if(!phone_pattern.matcher(phoneInput.replace(" ","")).matches())
         {
-            edPhone!!.error="nombre no valido"
+            edPhone!!.error=getString(R.string.alert_register_phone)
             validate=false
         }else edPhone!!.error=null
 ///////////////////CONTRASEÑA/////////////////////////
@@ -120,23 +127,24 @@ class MainActivity : AppCompatActivity() {
             validate=false
         }else if (!password_Pattern.matcher(passwordInput).matches())
         {
-            edPassword!!.error="no cumple con las politicas"
+            edPassword!!.error=getString(R.string.alert_register_password)
         }else edPassword!!.error=null
-
 
 ////////////////////////////////////
         return validate
     }
 
-/*
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val btn1:Button= findViewById(R.id.login1)
-        btn1.setOnClickListener {
-            val intent: Intent= Intent( this, LoginActivity::class.java )
-            startActivity( intent)
-        }
-    }*/
+    fun onLogin(view: View) {
+        val intent=Intent(this,LoginActivity::class.java)
+        startActivity(intent)
+    }
 
+/*
+    nombre:steven
+    apellido:barrios
+    nit:123456
+    correo:usuario@correo.com
+    telefono:1234567890
+    contraseña:1234567Z&
+ */
 }

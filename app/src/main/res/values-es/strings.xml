@@ -16,4 +16,12 @@
     <string name="user">Camilo</string>
     <string name="alert_requerid">Campo Requerido</string>
     <string name="policies"><![CDATA[Acepto los Terminos & Condiciones]]></string>
+    <string name="login_email">Ejemplo@email.com</string>
+    <string name="alert_register_right">Correcto</string>
+    <string name="alert_register_name">nombre no valido</string>
+    <string name="alert_register_lastname">apellido no valido</string>
+    <string name="alert_register_nit">Documento invalido</string>
+    <string name="alert_register_email">correo invalido</string>
+    <string name="alert_register_phone">telefono invalido</string>
+    <string name="alert_register_password"><![CDATA[la contraseña contenga mínimo 8 caracteres, letras mayúsculas y minúscula, numero y un carácter especial que puede ser (@#$%^&+=.)]]></string>
 </resources>

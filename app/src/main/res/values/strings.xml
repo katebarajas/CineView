@@ -16,4 +16,12 @@
     <string name="user">Camilo</string>
     <string name="alert_requerid">Requerid</string>
     <string name="policies"><![CDATA[Agree Termines & Policies]]></string>
+    <string name="login_email">Example@email.com</string>
+    <string name="alert_register_right">Right</string>
+    <string name="alert_register_name">invalid name</string>
+    <string name="alert_register_lastname">invalid lastname</string>
+    <string name="alert_register_nit">invalid nit</string>
+    <string name="alert_register_email">invalid email</string>
+    <string name="alert_register_phone">invalid phone</string>
+    <string name="alert_register_password"><![CDATA[The password contains a minimum of 8 characters, uppercase and lowercase letters, a number and a special character that can be (@#$%^&+=.)]]></string>
 </resources>
