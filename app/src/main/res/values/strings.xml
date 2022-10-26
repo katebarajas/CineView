@@ -14,4 +14,6 @@
     <string name="text_properties">And thanks to our premium subscription, you can enjoy more than 100 movies for a limited period of time, and with the platinum subscription you can do it indefinitely.</string>
     <string name="text_welcome">Welcome</string>
     <string name="user">Camilo</string>
+    <string name="alert_requerid">Requerid</string>
+    <string name="policies"><![CDATA[Agree Termines & Policies]]></string>
 </resources>

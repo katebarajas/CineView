@@ -11,4 +11,10 @@
     <color name="gray2">#424242</color>
     <color name="light_blue_500">#03A9F4</color>
     <color name="teal_900">#004D40</color>
+    <color name="Lime_100">#F0F4C3</color>
+    <color name="Lime_200">#E6EE9C</color>
+    <color name="Lime_400">#D4E157</color>
+    <color name="Lime_900">#827717</color>
+    <color name="Blue_700">#1973D2</color>
+    <color name="Blue_800">#1565C0</color>
 </resources>

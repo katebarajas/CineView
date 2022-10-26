@@ -2,13 +2,22 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:layout_width="match_parent" android:shape="rectangle">
+
+            <gradient android:startColor="@color/Lime_100"
+                android:centerColor="@color/Lime_400"
+                android:endColor="@color/Lime_100"
+                android:type="linear"
+                android:centerX="0.5"
+                ></gradient>
+
+        <!--
             <gradient android:startColor="@color/gray2"
                 android:centerColor="@color/teal_200"
                 android:endColor="@color/gray2"
                 android:type="linear"
                 android:centerX="0.5"
                 ></gradient>
-
+        -->
 
         </shape>
     </item>
