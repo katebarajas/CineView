@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".visual1"
+    tools:context=".WelcomeActivity"
     android:background="@drawable/fondos"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="20dp">
     <LinearLayout
 
@@ -17,7 +17,7 @@
         android:orientation="vertical"
         tools:context=".WelcomeActivity">
     <!--    <androidx.appcompat.widget.Toolbar
-            android:id="@+id/my_toolbar"
+            android:id="ka@+id/my_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:titleTextColor="@color/white"
@@ -51,7 +51,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="40dp"
+                    android:textSize="30dp"
                     android:text="@string/user"
                     android:textColor="@color/black">
 
@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="40dp"
+                    android:textSize="30dp"
                     android:text="@string/introductions"
                     android:autoSizeTextType="uniform"
                     android:textAlignment="gravity"
@@ -92,7 +92,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="35dp"
+                    android:textSize="15dp"
                     android:text="@string/text_introduction">
 
                 </TextView>
@@ -124,7 +124,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="40dp"
+                    android:textSize="30dp"
                     android:text="@string/properties"
                     android:textStyle="bold">
 
@@ -133,7 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autoSizeMinTextSize="6sp"
-              android:textSize="35dp"
+                    android:autoSizeMaxTextSize="15dp"
                     android:autoSizeTextType="uniform"
                     android:text="@string/text_properties"/>
 
@@ -144,14 +144,14 @@
 
     </LinearLayout>
 
-    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:backgroundTint="@color/black"
-        android:layout_margin="16dp"
+        android:backgroundTint="@color/Blue_800"
+        android:layout_margin="10dp"
         android:src="@android:drawable/ic_input_add"
-        app:tint="@color/white"/>-->
+        app:tint="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -5,7 +5,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
 
@@ -23,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         var correo:String=EditCorreo!!.text.toString()
         if (correo=="camilo@gmail.com"){
             if (EditPassword!!.text.toString()=="123"){
-                val intent=Intent(this,visual1::class.java)
+                val intent=Intent(this,WelcomeActivity::class.java)
                 startActivity(intent)
                 val negativeButton={ _: DialogInterface, _:Int->}
                 val positiveButton= { dialog: DialogInterface, which: Int ->
