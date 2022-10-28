@@ -16,4 +16,6 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    fun vistaprevia(previsualizar: View) {}
 }

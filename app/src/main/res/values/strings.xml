@@ -24,4 +24,5 @@
     <string name="alert_register_email">invalid email</string>
     <string name="alert_register_phone">invalid phone</string>
     <string name="alert_register_password"><![CDATA[The password contains a minimum of 8 characters, uppercase and lowercase letters, a number and a special character that can be (@#$%^&+=.)]]></string>
+    <string name="text_vistaprevia">Preview</string>
 </resources>
