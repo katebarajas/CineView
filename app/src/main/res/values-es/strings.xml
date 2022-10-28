@@ -9,9 +9,9 @@
     <string name="text_Login">Iniciar Sesion</string>
     <string name="text_Contra">Contraseña</string>
     <string name="introductions">Descripción</string>
-    <string name="text_introduction">Bienvenido a cineview, con nuestro servicio usted podrá tener acceso a la renta de películas y series exclusivas del cine contemporáneo para disfrutar en casa o desde donde sea</string>
-    <string name="properties">Suspcrición</string>
-    <string name="text_properties">Y gracias a nuestra suscripción premium, podrá disfrutar mas de 100 películas por un periodo de tiempo limitado, y con la suscripción platinum podrá hacerlo de manera indefinida.</string>
+    <string name="text_introduction">Bienvenido a cineview, el espacio ideal donde usted podrá encontrar las mejores recomendaciones acerca de todo tipo de películas y series exclusivas del cine contemporáneo; calificaciones basadas en reseñas del promedio de los clientes, en estudios profesionales y en controversias de los espectadores.</string>
+    <string name="properties">Contenido</string>
+    <string name="text_properties">Al hacer click en el boton de previsualizar, usted podra encontrar los recomendados por año para peliculas y series, támbien podrá encontrar peliculas en estreno a nivel mundial y finalmente las mejores calificadas basados en datos profesionales.</string>
     <string name="text_welcome">Bienvenido</string>
     <string name="user">Camilo</string>
     <string name="alert_requerid">Campo Requerido</string>
