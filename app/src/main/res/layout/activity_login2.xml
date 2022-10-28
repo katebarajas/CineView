@@ -15,12 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        android:gravity="center"
         android:orientation="vertical">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity=""
+            android:layout_gravity="center"
             android:src="@drawable/popeta2" />
 
         <TextView
@@ -68,12 +68,33 @@
 
             android:onClick="onLogin"
             android:text="@string/text_Login" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btngoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onGoogle"
+            app:icon="@drawable/google"
+            android:text="@string/text_Google"
+            app:iconGravity="textEnd"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onFacebook"
+            app:icon="@drawable/facebook"
+            android:text="@string/text_Facebook"
+            app:iconGravity="textEnd"/>
+
+
         <Button
             android:id="@+id/EditRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:drawableStart="@drawable/facebook"
             android:onClick="onRegister"
+            android:icongravity="textEnd"
             android:text="@string/text_Register" />
 
 

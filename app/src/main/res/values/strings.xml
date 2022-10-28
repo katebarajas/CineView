@@ -33,4 +33,6 @@
     <string name="nav_menu4">In Teathers</string>
     <string name="nav_menu5">Top Box Office</string>
     <string name="nav_menu6">Coming soon Theather</string>
+    <string name="text_Google">Sing in with Google</string>
+    <string name="text_Facebook">Sing in with Facebook</string>
 </resources>

@@ -33,4 +33,6 @@
     <string name="nav_menu4">En Cartelera</string>
     <string name="nav_menu5">Peliculas mas Taquilleras</string>
     <string name="nav_menu6">Proximamente en Cines</string>
+    <string name="text_Google">Inicia sesion con Google</string>
+    <string name="text_Facebook">Inicia sesion con Facebook</string>
 </resources>
