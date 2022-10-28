@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
         EditCorreo=findViewById(R.id.EditCorreo)
         EditPassword=findViewById(R.id.EditPassword)
     }
-
+    /* Hola mundo*/
     fun onLogin(BotonLogin: View) {
         var correo:String=EditCorreo!!.text.toString()
         if (correo=="camilo@gmail.com"){
