@@ -4,11 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <item
-        android:id="@+id/nav_todo"
+        android:id="@+id/nav_new"
         android:icon="@android:drawable/ic_menu_agenda"
-        android:title="Estrenos Peliculas"/>
+        android:title="@string/nav_menu1"/>
+    <item
+        android:id="@+id/nav_today"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/nav_menu2"/>
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/nav_menu3"/>
+    <item
+        android:id="@+id/nav_cartel"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/nav_menu4"/>
+    <item
+        android:id="@+id/nav_movies"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/nav_menu5"/>
+    <item
+        android:id="@+id/nav_cinema"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/nav_menu6"/>
     <item
         android:id="@+id/nav_about"
         android:icon="@android:drawable/ic_menu_info_details"
-        android:title="Estrenos Series"/>
+        android:title="@string/about"/>
+
 </menu>

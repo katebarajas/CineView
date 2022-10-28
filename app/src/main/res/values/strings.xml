@@ -8,7 +8,7 @@
     <string name="text_Register">register user</string>
     <string name="text_Login">Login in</string>
     <string name="text_Contra">Password</string>
-    <string name="introductions">Introduction</string>
+    <string name="introductions">Cant decide what to watch?</string>
     <string name="text_introduction">Welcome to cineview, the ideal place where you can find the best recommendations about all kinds of movies and exclusive series of contemporary cinema; ratings based on average customer reviews, professional studies, and controversies from the viewers</string>
     <string name="properties">Content</string>
     <string name="text_properties">By clicking on the preview button, you can find movies and series recommended by year, you can also find premiere movies worldwide and finally the best rated based on professional data.</string>
@@ -26,4 +26,11 @@
     <string name="alert_register_phone">invalid phone</string>
     <string name="alert_register_password"><![CDATA[The password contains a minimum of 8 characters, uppercase and lowercase letters, a number and a special character that can be (@#$%^&+=.)]]></string>
     <string name="text_vistaprevia">Preview</string>
+    <string name="nav_menu1">My Favorites </string>
+    <string name="nav_menu2">The most popular</string>
+    <string name="nav_menu3">Fan Favorites</string>
+    <string name="about">About</string>
+    <string name="nav_menu4">In Teathers</string>
+    <string name="nav_menu5">Top Box Office</string>
+    <string name="nav_menu6">Coming soon Theather</string>
 </resources>
