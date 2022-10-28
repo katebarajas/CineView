@@ -32,30 +32,28 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_margin="5dp">
+            android:layout_margin="10dp">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:orientation="vertical"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="28dp">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="35dp"
+                    android:textSize="40dp"
                     android:text="@string/text_welcome"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:layout_gravity="center">
+                    android:textColor="@color/black">
 
                 </TextView>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="30dp"
                     android:text="@string/user"
-                    android:textColor="@color/black"
-                    android:layout_gravity="center">
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -74,7 +72,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_margin="15dp">
+            android:layout_margin="20dp">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -85,17 +83,20 @@
                     android:layout_height="wrap_content"
                     android:textSize="30dp"
                     android:text="@string/introductions"
+                    android:autoSizeTextType="uniform"
+                    android:textAlignment="gravity"
+                    android:justificationMode="inter_word"
                     android:textColor="@color/black">
 
                 </TextView>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="17dp"
-                    android:justificationMode="inter_word"
+                    android:textSize="15dp"
                     android:text="@string/text_introduction">
 
                 </TextView>
+
 
 
             </LinearLayout>
@@ -105,21 +106,14 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_margin="15dp"
-            android:gravity="center">
+            android:layout_margin="15dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:src="@drawable/subcription">
 
-
-                <Button
-                    android:id="@+id/preview"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:onClick="vistaprevia"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/Blue_800"
-                    android:text="@string/text_vistaprevia"></Button>
-
+            </ImageView>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -132,14 +126,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="30dp"
                     android:text="@string/properties"
-                    android:textColor="@color/black">
+                    android:textStyle="bold">
 
                 </TextView>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="17dp"
-                    android:justificationMode="inter_word"
+                    android:autoSizeMinTextSize="6sp"
+                    android:autoSizeMaxTextSize="15dp"
                     android:autoSizeTextType="uniform"
                     android:text="@string/text_properties"/>
 
