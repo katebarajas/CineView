@@ -8,14 +8,16 @@
     tools:context=".MainActivity1"
     android:background="@drawable/fondos"
     android:orientation="horizontal"
-    android:padding="20dp">
+    >
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:scrollbarSize="50dp">
 
         <ImageView
             android:layout_width="match_parent"

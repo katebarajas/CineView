@@ -35,4 +35,7 @@
     <string name="nav_menu6">Coming soon Theather</string>
     <string name="text_Google">Sing in with Google</string>
     <string name="text_Facebook">Sing in with Facebook</string>
+    <string name="text_trending">Most popular movies ever.</string>
+    <string name="text_premiere">Premiere movies.</string>
+    <string name="text_rating">Top rated movies.</string>
 </resources>
