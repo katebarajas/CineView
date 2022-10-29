@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".MainActivity1"
     android:background="@drawable/fondos"
     android:orientation="horizontal"
-    android:padding="5dp">
+    android:padding="10dp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="3dp"
+        android:layout_margin="5dp"
         android:gravity="center"
         android:orientation="vertical">
         <ImageView
             android:layout_width="300dp"
-            android:layout_height="250dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:src="@drawable/popeta2" />
 
@@ -27,16 +27,15 @@
             android:layout_height="wrap_content"
             android:text="@string/text_Login"
             android:textColor="@color/black"
-            android:textSize="30dp"
-            android:textStyle="italic" />
+            android:textSize="40dp"
+            android:textStyle="italic"
+            android:layout_marginEnd="4dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Example@kjsdfsa"
-
-            >
+            android:hint="Example@kjsdfsa">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/EditCorreo"
@@ -51,14 +50,15 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/text_Contra">
+            app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/EditPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:textSize="30dp"/>
+                android:textSize="30dp"
+                android:hint="password"
+                android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -68,15 +68,17 @@
             android:backgroundTint="@color/black"
             android:onClick="onLogin"
             android:text="@string/text_Login"
-            android:textSize="25dp"/>
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"/>
         <Button
             android:id="@+id/EditRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
             android:onClick="onRegister"
+            android:layout_marginTop="10dp"
             android:text="@string/text_Register"
-            android:textSize="25dp"/>
+            android:textSize="30dp"/>
 
 
     </LinearLayout>

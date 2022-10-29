@@ -6,15 +6,12 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
 import android.view.View
-import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import java.util.regex.Pattern
 
-class MainActivity : AppCompatActivity() {
+class registerActivity : AppCompatActivity() {
 
     private var edName: EditText?=null
     private var edLastname: EditText?=null
@@ -135,7 +132,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onLogin(view: View) {
-        val intent=Intent(this,LoginActivity::class.java)
+        val intent=Intent(this,MainActivity1::class.java)
         startActivity(intent)
     }
 

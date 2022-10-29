@@ -8,12 +8,12 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
 
-class LoginActivity : AppCompatActivity() {
+class MainActivity1 : AppCompatActivity() {
     private var EditCorreo:TextInputEditText?=null
     private var EditPassword:TextInputEditText?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login2)
+        setContentView(R.layout.activity_main1)
         EditCorreo=findViewById(R.id.EditCorreo)
         EditPassword=findViewById(R.id.EditPassword)
     }
@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun onRegister(view: View) {
-        val intent =Intent(this,MainActivity::class.java)
+        val intent =Intent(this,registerActivity::class.java)
         startActivity(intent)
     }
 }
