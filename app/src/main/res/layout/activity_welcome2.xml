@@ -8,7 +8,7 @@
     tools:context=".welcomeActivity2"
     android:background="@drawable/fondos"
     android:orientation="vertical"
-    android:padding="20dp" >
+    android:padding="30dp" >
     <LinearLayout
 
         android:layout_width="match_parent"
@@ -144,7 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="5dp">
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -177,6 +177,35 @@
                 android:layout_marginHorizontal="10dp">
 
             </ImageView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="@string/text_viewandpick"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_weight="1"
+                android:backgroundTint="@color/Blue_800"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="@color/white" />
+
 
         </LinearLayout>
 

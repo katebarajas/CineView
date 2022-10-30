@@ -35,7 +35,8 @@
     <string name="nav_menu6">Proximamente en Cines</string>
     <string name="text_Google">Inicia sesion con Google</string>
     <string name="text_Facebook">Inicia sesion con Facebook</string>
-    <string name="text_trending">Most popular movies ever.</string>
-    <string name="text_premiere">Premiere movies.</string>
-    <string name="text_rating">Top rated movies.</string>
+    <string name="text_trending">Peliculas más famosas de la historia.</string>
+    <string name="text_premiere">Peliculas en estreno.</string>
+    <string name="text_rating">Peliculas mejor calificadas.</string>
+    <string name="text_viewandpick">Click aca para calificar y escoger tus peliculas.</string>
 </resources>
