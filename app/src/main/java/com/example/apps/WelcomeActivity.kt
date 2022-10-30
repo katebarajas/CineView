@@ -9,13 +9,12 @@ class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
+
         val fab: View = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
             //Snackbar.make(view,"add",Snackbar.LENGTH_LONG).show()
-            val intent = Intent(this, ToDoActivity::class.java)
+            val intent = Intent(this, welcomeActivity2::class.java)
             startActivity(intent)
         }
     }
-
-    fun vistaprevia(previsualizar: View) {}
 }

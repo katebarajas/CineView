@@ -1,11 +1,20 @@
 package com.example.apps
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 
 class welcomeActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome2)
+
+        val fab: View = findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            //Snackbar.make(view,"add",Snackbar.LENGTH_LONG).show()
+            val intent = Intent(this, welcomeActivity2::class.java)
+            startActivity(intent)
+        }
     }
 }

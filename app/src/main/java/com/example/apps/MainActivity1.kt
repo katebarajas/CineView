@@ -28,9 +28,6 @@ class MainActivity1 : AppCompatActivity() {
                 val positiveButton= { dialog: DialogInterface, which: Int ->
 
                 }
-                
-
-
             }else{
                 val dialog = AlertDialog.Builder(this)
                     .setTitle("ERROR")
