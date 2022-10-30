@@ -11,7 +11,7 @@ class SplaschActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splasch2)
         Handler().postDelayed({
-            startActivity(Intent(this,MainActivity1::class.java))
+            startActivity(Intent(this,MainActivity::class.java))
             finish()
         },splashScreentimeout)
     }

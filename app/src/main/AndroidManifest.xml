@@ -7,7 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/fondo_degradado"
-        android:label="Splash Screen"
+        android:label="Cine View"
         android:roundIcon="@drawable/fondo_degradado"
         android:supportsRtl="false"
         android:theme="@style/Theme.CineView.NoActionBar"
@@ -47,14 +47,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity1"
+            android:name=".MainActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".registerActivity"
+            android:name=".RegisterActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
