@@ -11,7 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import java.util.regex.Pattern
 
-class registerActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
 
     private var edName: EditText?=null
     private var edLastname: EditText?=null
@@ -35,7 +35,7 @@ class registerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_register)
         edName=findViewById(R.id.EditNombre)
         edLastname=findViewById(R.id.EditApellido)
         edNit=findViewById(R.id.EditDocumento)
@@ -132,7 +132,7 @@ class registerActivity : AppCompatActivity() {
     }
 
     fun onLogin(view: View) {
-        val intent=Intent(this,MainActivity1::class.java)
+        val intent=Intent(this,MainActivity::class.java)
         startActivity(intent)
     }
 

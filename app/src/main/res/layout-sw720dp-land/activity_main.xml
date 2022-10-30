@@ -4,142 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:padding="1dp"
+    tools:context=".MainActivity"
     android:background="@drawable/fondos"
-    android:gravity="bottom"
-    tools:context=".registerActivity">
+    android:orientation="horizontal"
+    android:padding="5dp">
+
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
+        android:layout_margin="3dp"
+        android:gravity="center"
+        android:orientation="vertical">
         <ImageView
             android:layout_width="400dp"
             android:layout_height="400dp"
             android:layout_gravity="center"
-            android:src="@drawable/popeta2">
-        </ImageView>
-        <Button
-            android:id="@+id/EditRegistrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onRegistrar"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:text="@string/text_Register"
-            android:textSize="30dp"></Button>
+            android:src="@drawable/popeta2" />
 
-        <Button
-            android:id="@+id/login1"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onLogin"
-            android:textColor="@color/white"
-            android:backgroundTint="#A6000000"
             android:text="@string/text_Login"
-            android:textSize="30dp"></Button>
+            android:textColor="@color/black"
+            android:textSize="40dp"
+            android:textStyle="italic" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Example@kjsdfsa"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="40dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        ////////////////////////////////////////////////////////////////
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="password"
+                android:textSize="40dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/EditDIRC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:onClick="onLogin"
+            android:text="@string/text_Login"
+            android:textSize="40dp"/>
+        <Button
+            android:id="@+id/EditRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:onClick="onRegister"
+            android:text="@string/text_Register"
+            android:textSize="40dp"/>
+
+
     </LinearLayout>
-<LinearLayout
-    android:layout_width="0dp"
-    android:layout_weight="2"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="@string/text_name"
-        android:layout_marginTop="20dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:textSize="30dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    ////////////////////////////////////////////////////////////////
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="@string/text_lastname"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditApellido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:textSize="30dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
- ///////////////////////////////////////////////////////////////////////////
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="@string/text_Nit"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditDocumento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:textSize="30dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    /////////////////////////////////////////////////////////////////////////////////
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="@string/text_Email"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditCorreo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:textSize="30dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-    /////////////////////////////////////////////////////////////////////////////////
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="@string/text_Phone"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditTelefono"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:textSize="30dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    //////////////////////////////////////////////////////////////////////////////////
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="@string/text_Contra"
-        app:endIconMode="password_toggle"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:textSize="30dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
 
 
 </LinearLayout>
-</LinearLayout>
-
-
