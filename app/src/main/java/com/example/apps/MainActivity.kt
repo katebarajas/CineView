@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
 
@@ -28,23 +29,28 @@ class MainActivity : AppCompatActivity() {
                 val positiveButton= { dialog: DialogInterface, which: Int ->
 
                 }
-                
+                Toast.makeText(this,getString(R.string.msn_welcome_user) +" "+ getString(R.string.user),Toast.LENGTH_LONG)
+                    .show()
 
 
             }else{
-                val dialog = AlertDialog.Builder(this)
+                /*val dialog = AlertDialog.Builder(this)
                     .setTitle("ERROR")
                     .setMessage("password Invalite")
                     .create()
+                    .show()*/
+                Toast.makeText(this,getString(R.string.errorpassword),Toast.LENGTH_LONG)
                     .show()
             }
 
 
         }else{
-            val dialog = AlertDialog.Builder(this)
+            /*val dialog = AlertDialog.Builder(this)
                 .setTitle("ERROR")
                 .setMessage("Email Invalite")
                 .create()
+                .show()*/
+            Toast.makeText(this,getString(R.string.errorusername), Toast.LENGTH_LONG)
                 .show()
         }
 

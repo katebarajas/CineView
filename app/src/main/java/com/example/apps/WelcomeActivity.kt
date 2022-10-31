@@ -10,9 +10,8 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        val fab: View = findViewById(R.id.fab)
+        val fab: View = findViewById(R.id.fab1)
         fab.setOnClickListener { view ->
-            //Snackbar.make(view,"add",Snackbar.LENGTH_LONG).show()
             val intent = Intent(this, welcomeActivity2::class.java)
             startActivity(intent)
         }
