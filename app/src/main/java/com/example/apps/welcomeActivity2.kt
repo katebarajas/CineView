@@ -13,7 +13,7 @@ class welcomeActivity2 : AppCompatActivity() {
         val fab: View = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
             //Snackbar.make(view,"add",Snackbar.LENGTH_LONG).show()
-            val intent = Intent(this, welcomeActivity2::class.java)
+            val intent = Intent(this, ToDoActivity::class.java)
             startActivity(intent)
         }
     }
