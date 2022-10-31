@@ -9,11 +9,14 @@
     android:background="@drawable/fondos"
     android:orientation="vertical"
     android:padding="30dp" >
+
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,7 +26,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_trending"
+                android:text="@string/nav_menu1"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/black">
@@ -78,7 +81,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_rating"
+                android:text="@string/nav_menu2"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/black">
@@ -132,7 +135,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_premiere"
+                android:text="@string/nav_menu3"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/black">
@@ -190,7 +193,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:text="@string/text_viewandpick"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/black">
 
@@ -198,12 +201,12 @@
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_weight="1"
-                android:backgroundTint="@color/Blue_800"
+                android:backgroundTint="@color/Blue_900"
                 android:src="@android:drawable/ic_input_add"
+
                 app:tint="@color/white" />
 
 

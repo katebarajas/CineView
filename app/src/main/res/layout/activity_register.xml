@@ -126,7 +126,7 @@
         android:layout_height="wrap_content"
         android:onClick="onRegistrar"
         android:textColor="@color/white"
-        android:backgroundTint="@color/Blue_800"
+        android:backgroundTint="@color/Blue_900"
         android:text="@string/text_Register">
 
     </Button>
@@ -137,7 +137,7 @@
         android:layout_height="wrap_content"
         android:onClick="onLogin"
         android:textColor="@color/white"
-        android:backgroundTint="@color/Blue_800"
+        android:backgroundTint="@color/Blue_900"
 
         android:text="@string/text_Login"></Button>
 

@@ -40,5 +40,5 @@
     <string name="text_trending">Most popular movies ever.</string>
     <string name="text_premiere">Premiere movies.</string>
     <string name="text_rating">Top rated movies.</string>
-    <string name="text_viewandpick">click here to pick and rate your movies.</string>
+    <string name="text_viewandpick">Click here to pick and rate your movies.</string>
 </resources>
