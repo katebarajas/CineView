@@ -21,9 +21,11 @@ class DetailFragment: Fragment() {
         var tarea=requireArguments().getString("tarea")
         var hora=requireArguments().getString("hora")
         var lugar=requireArguments().getString("lugar")
+
         var tvTarea : TextView =fragmento.findViewById(R.id.tvTarea)
         var tvHora : TextView =fragmento.findViewById(R.id.tvHora)
         var tvLugar : TextView =fragmento.findViewById(R.id.tvLugar)
+
         tvTarea.text=tarea
         tvHora.text=hora
         tvLugar.text=lugar

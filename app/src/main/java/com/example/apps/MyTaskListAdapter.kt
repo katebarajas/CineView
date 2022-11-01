@@ -17,6 +17,7 @@ class MyTaskListAdapter (context : AppCompatActivity, val info : Bundle)
     var myTaskTitles: ArrayList<String> = info.getStringArrayList("titles") as ArrayList<String>
     var myTaskTimes: ArrayList<String> = info.getStringArrayList("times") as ArrayList<String>
     var myTaskPlaces: ArrayList<String> = info.getStringArrayList("places") as ArrayList<String>
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layout = LayoutInflater.from(parent.context).inflate(R.layout.task_list_items,parent,false)
         return MyViewHolder(layout)
@@ -39,10 +40,11 @@ class MyTaskListAdapter (context : AppCompatActivity, val info : Bundle)
                 ?.replace(R.id.fcvToDo,DetailFragment::class.java,datos,"detail")
                 ?.addToBackStack("")
                 ?.commit()
+
         }
 
-
     }
+
 
     override fun getItemCount(): Int {
         return myTaskTitles.size

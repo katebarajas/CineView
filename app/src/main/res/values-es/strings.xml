@@ -8,7 +8,7 @@
     <string name="text_Register">Registrar Usuario</string>
     <string name="text_Login">Iniciar Sesion</string>
     <string name="text_Contra">Contraseña</string>
-    <string name="introductions">Introcucción</string>
+    <string name="introductions">¿No puedes decidir qué ver?</string>
     <string name="text_introduction">Bienvenido a cineview, el espacio ideal donde usted podrá encontrar las mejores recomendaciones acerca de todo tipo de películas y series exclusivas del cine contemporáneo; calificaciones basadas en reseñas del promedio de los clientes, en estudios profesionales y en controversias de los espectadores.</string>
     <string name="properties">Contenido</string>
     <string name="text_properties">Al hacer click en el boton de previsualizar, usted podra encontrar los recomendados por año para peliculas y series, támbien podrá encontrar peliculas en estreno a nivel mundial y finalmente las mejores calificadas basados en datos profesionales.</string>
@@ -28,7 +28,7 @@
     <string name="errorusername">Usuario Invalido</string>
     <string name="errorpassword">Invalid Contraseña</string>
     <string name="erroremail">Invalid Email</string>
-    <string name="nav_menu1">Mis Favoritos</string>
+    <string name="nav_menu1">Mi Lista de Tareas</string>
     <string name="nav_menu2">Lo mas popular</string>
     <string name="nav_menu3">Favoritos de los Aficionados</string>
     <string name="about">Acerca</string>
@@ -41,4 +41,5 @@
     <string name="text_premiere">Peliculas en estreno.</string>
     <string name="text_rating">Peliculas mejor calificadas.</string>
     <string name="text_viewandpick">Click aca para calificar y escoger tus peliculas.</string>
+    <string name="nav_destacado">Destacado hoy</string>
 </resources>
