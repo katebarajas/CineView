@@ -41,4 +41,9 @@ class NewTaskActivity : AppCompatActivity() {
         }
 
     }
+
+    fun onEditTask(view: View) {
+
+    }
+
 }

@@ -58,6 +58,7 @@
             app:icon="@drawable/ic_baseline_edit_24"
             app:iconSize="20dp"
             app:iconGravity="top"
+            android:onClick="onEditTask"
 
             />
 
@@ -69,6 +70,7 @@
             app:iconSize="20dp"
             app:iconGravity="top"
             app:icon="@drawable/ic_baseline_delete_forever_24"
+            android:onClick="onDeleteTask"
 
             />
 
