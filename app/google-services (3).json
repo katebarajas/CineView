@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "865349761770",
+    "project_id": "apps-cineview",
+    "storage_bucket": "apps-cineview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865349761770:android:2e5b5c0ce925ea28c5f593",
+        "android_client_info": {
+          "package_name": "com.example.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865349761770-r9qn406k18g7i941teu6pfjeomkpjint.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-UHKGfVc2E0MuLv8DjUU7v_Fbdn7Lghk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865349761770-r9qn406k18g7i941teu6pfjeomkpjint.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
