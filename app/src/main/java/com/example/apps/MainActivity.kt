@@ -8,8 +8,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var analytics: FirebaseAnalytics
     private var EditCorreo:TextInputEditText?=null
     private var EditPassword:TextInputEditText?=null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         EditCorreo=findViewById(R.id.EditCorreo)
         EditPassword=findViewById(R.id.EditPassword)
+        analytics=Firebase.analytics
     }
     /* Hola mundo*/
     fun onLogin(BotonLogin: View) {
