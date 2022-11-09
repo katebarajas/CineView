@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,7 +7,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_opacidad"
     android:orientation="horizontal"
-    tools:context=".RegisterActivity">
+    android:id="@+id/authLayout"
+    tools:context=".MainActivity">
 
 
     <LinearLayout
@@ -63,49 +63,80 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/EditDIRC"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onLogin"
-                android:text="@string/text_Login" />
+                android:layout_height="wrap_content">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btngoogle"
+                <Button
+                    android:id="@+id/EditDIRC"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:onClick="onLogin"
+                    android:layout_margin="5dp"
+                    android:text="@string/text_Login" />
+
+                <Button
+                    android:id="@+id/EditRegister"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:onClick="onRegister"
+                    android:text="@string/text_Register" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/text_Google"
-                app:icon="@drawable/google"
-                app:iconTintMode="multiply"
-                app:iconPadding="@dimen/cardview_compat_inset_shadow"
-                />
+                android:layout_height="wrap_content">
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btngoogle"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:text="@string/text_Google"
+                    app:icon="@drawable/google"
+                    app:iconTintMode="multiply"
+                    app:iconPadding="@dimen/cardview_compat_inset_shadow"
+                    />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnface"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnface"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:text="@string/text_Facebook"
+                    app:icon="@drawable/facebook" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/text_Facebook"
-                app:icon="@drawable/facebook" />
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/EditRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onRegister"
-                android:text="@string/text_Register" />
 
-            <Button
-                android:id="@+id/EditRegisteremail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onRegisteremail"
-                android:text="REGISTER EMAIL" />
+
+                <Button
+                    android:id="@+id/btnRegisteremail"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:onClick="onRegisteremail"
+                    android:layout_margin="5dp"
+                    android:text="REGISTER EMAIL" />
+                <Button
+                    android:id="@+id/btnLoginemail"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:onClick="onLoginemail"
+                    android:text="LOGIN EMAIL" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

@@ -42,4 +42,5 @@
     <string name="text_rating">Peliculas mejor calificadas.</string>
     <string name="text_viewandpick">Click aca para calificar y escoger tus peliculas.</string>
     <string name="nav_destacado">Destacado hoy</string>
+    <string name="prefs_file">com.example.apps.PREFERENCE_FILE_KEY</string>
 </resources>

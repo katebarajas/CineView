@@ -136,6 +136,8 @@ class RegisterActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
+
 /*
     nombre:steven
     apellido:barrios
