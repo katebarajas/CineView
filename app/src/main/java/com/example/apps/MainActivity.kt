@@ -11,26 +11,28 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
+import com.google.android.gms.tasks.Tasks
 import com.google.android.material.textfield.TextInputEditText
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.ktx.Firebase
 
 //prueba de guardado
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var analytics: FirebaseAnalytics
+
     private var EditCorreo: EditText? = null
     private var EditPassword: TextInputEditText? = null
     private var authLayout: LinearLayout? = null
     private val GOOGLE_SIGN_IN = 100
-    private var btnGoogle: SignInButton?=null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         EditCorreo = findViewById(R.id.EditCorreo)
         EditPassword = findViewById(R.id.EditPassword)
         authLayout = findViewById(R.id.authLayout)
-        btnGoogle = findViewById(R.id.btnGoogle)
 
         session()
 
@@ -167,6 +168,50 @@ class MainActivity : AppCompatActivity() {
         prefs.apply()
         FirebaseAuth.getInstance().signOut()
         onBackPressed()
+    }
+    fun onGoogle(btngoogle: View) {
+        val googleConfig =
+            GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build()
+
+        val googleClient: GoogleSignInClient = GoogleSignIn.getClient(this, googleConfig)
+        googleClient.signOut()
+        startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
+
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == GOOGLE_SIGN_IN ) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                val account: GoogleSignInAccount? = task.getResult(ApiException::class.java)
+
+                if (account != null) {
+                    val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+                    FirebaseAuth.getInstance().signInWithCredential(credential)
+                        .addOnCompleteListener {
+                            if(it.isSuccessful){
+                                showHome(account.email?:"",ProviderType.GOOGLE)
+                            }else{
+                                showAlert()
+                            }
+                        }
+                }
+            } catch (e:ApiException){
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Error")
+                builder.setMessage(e.toString())
+                builder.setPositiveButton("Aceptar", null)
+                val dialog:AlertDialog= builder.create()
+                dialog.show()
+            }
+        }
+
+
     }
 
    }
