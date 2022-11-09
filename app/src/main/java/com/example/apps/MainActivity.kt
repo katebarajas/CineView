@@ -11,10 +11,15 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
+import com.google.android.gms.common.api.ApiException
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +27,8 @@ class MainActivity : AppCompatActivity() {
     private var EditCorreo: EditText? = null
     private var EditPassword: TextInputEditText? = null
     private var authLayout: LinearLayout? = null
+    private val GOOGLE_SIGN_IN = 100
+    private var btnGoogle: SignInButton?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +36,10 @@ class MainActivity : AppCompatActivity() {
         EditCorreo = findViewById(R.id.EditCorreo)
         EditPassword = findViewById(R.id.EditPassword)
         authLayout = findViewById(R.id.authLayout)
+        btnGoogle = findViewById(R.id.btnGoogle)
+
         session()
+
     }
 
     fun onLogin(BotonLogin: View) {
@@ -156,4 +166,5 @@ class MainActivity : AppCompatActivity() {
         FirebaseAuth.getInstance().signOut()
         onBackPressed()
     }
-}
+
+   }

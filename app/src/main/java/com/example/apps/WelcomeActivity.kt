@@ -10,7 +10,8 @@ import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 
 enum class ProviderType {
-    BASIC
+    BASIC,
+    GOOGLE
 }
 
 

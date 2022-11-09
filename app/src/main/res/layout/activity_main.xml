@@ -94,7 +94,8 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btngoogle"
+                    android:id="@+id/btnGoogle"
+                    android:onClick="onGoogle"
                     android:layout_width="180dp"
                     android:layout_height="60dp"
                     android:layout_margin="5dp"
