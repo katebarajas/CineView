@@ -22,6 +22,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.ktx.Firebase
 
+//prueba de guardado
+
 class MainActivity : AppCompatActivity() {
     private lateinit var analytics: FirebaseAnalytics
     private var EditCorreo: EditText? = null
