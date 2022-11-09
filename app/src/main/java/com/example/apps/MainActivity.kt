@@ -168,6 +168,7 @@ class MainActivity : AppCompatActivity() {
         prefs.apply()
         FirebaseAuth.getInstance().signOut()
         onBackPressed()
+
     }
     fun onGoogle(btngoogle: View) {
         val googleConfig =
