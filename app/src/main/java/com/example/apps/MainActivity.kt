@@ -176,6 +176,7 @@ class MainActivity : AppCompatActivity() {
                 .requestEmail()
                 .build()
 
+
         val googleClient: GoogleSignInClient = GoogleSignIn.getClient(this, googleConfig)
         googleClient.signOut()
         startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
