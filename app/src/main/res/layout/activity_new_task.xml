@@ -10,6 +10,15 @@
     tools:context=".NewTaskActivity">
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextID2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:visibility="gone"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,6 +40,7 @@
         />
 
     <Button
+        android:id="@+id/btnSavetask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="100dp"

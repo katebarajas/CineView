@@ -22,6 +22,7 @@ class ToDoFragment : Fragment() {
     var myTaskTitles : ArrayList<String> = ArrayList()
     var myTaskTimes : ArrayList<String> = ArrayList()
     var myTaskPlaces : ArrayList<String> = ArrayList()
+    var myTaskIds : ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,10 +45,12 @@ class ToDoFragment : Fragment() {
             val recursiveScope = 0
             startActivityForResult(intent,recursiveScope)
         }
+
         var info : Bundle = Bundle()
         info.putStringArrayList("titles", myTaskTitles)
         info.putStringArrayList("times", myTaskTimes)
         info.putStringArrayList("places", myTaskPlaces)
+        info.putStringArrayList("id", myTaskIds)
         listRecyclerView=requireView().findViewById(R.id.recyclerToDoList)
         myAdapter = MyTaskListAdapter(activity as AppCompatActivity,info)
         listRecyclerView.setHasFixedSize(true)
@@ -64,14 +67,16 @@ class ToDoFragment : Fragment() {
         runBlocking {
             launch {
                 var result= toDoDAD.getAllTasks()
-                var i=1
+                var i=0
                 myTaskTitles.clear()
                 myTaskTimes.clear()
                 myTaskPlaces.clear()
+                myTaskIds.clear()
                 while (i< result.size){
                     myTaskTitles.add(result[i].title.toString())
                     myTaskTimes.add(result[i].time.toString())
                     myTaskPlaces.add(result[i].place.toString())
+                    myTaskIds.add(result[i].id.toString())
                     i++
                 }
                 myAdapter.notifyDataSetChanged()
@@ -87,6 +92,8 @@ class ToDoFragment : Fragment() {
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
+
+
 
 
 }
