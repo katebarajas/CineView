@@ -15,6 +15,7 @@ enum class ProviderType {
 }
 
 
+
 class WelcomeActivity : AppCompatActivity() {
     private var textEmail: TextView?=null
     private var textProvider: TextView?=null
