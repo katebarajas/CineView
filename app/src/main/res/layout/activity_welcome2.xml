@@ -11,12 +11,10 @@
     tools:context=".welcomeActivity2">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:scrollbars="vertical">
-
 
         <LinearLayout
             android:layout_width="match_parent"
