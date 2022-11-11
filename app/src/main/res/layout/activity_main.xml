@@ -3,144 +3,168 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_opacidad"
     android:orientation="horizontal"
-    android:id="@+id/authLayout"
     tools:context=".MainActivity">
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="25dp"
-        android:orientation="vertical"
-        android:scrollbarSize="50dp"
-        android:scrollbars="vertical">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/popeta2" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_Login"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="italic" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/login_email"
-
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/EditCorreo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:endIconMode="password_toggle">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/EditPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="password"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:orientation="vertical"
+            android:scrollbarSize="50dp"
+            android:scrollbars="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:src="@drawable/popeta2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/EditDIRC"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:onClick="onLogin"
-                    android:layout_margin="5dp"
-                    android:text="@string/text_Login" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_Login"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
 
-                <Button
-                    android:id="@+id/EditRegister"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:onClick="onRegister"
-                    android:text="@string/text_Register" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_email"
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EditCorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EditPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2"
+                android:orientation="vertical">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnGoogle"
-                    android:onClick="onGoogle"
-                    android:layout_width="180dp"
-                    android:layout_height="60dp"
-                    android:layout_margin="5dp"
-                    android:text="@string/text_Google"
-                    app:icon="@drawable/google"
-                    app:iconTintMode="multiply"
-                    app:iconPadding="@dimen/cardview_compat_inset_shadow"
-                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnface"
-                    android:layout_width="180dp"
-                    android:layout_height="60dp"
-                    android:layout_margin="5dp"
-                    android:text="@string/text_Facebook"
-                    app:icon="@drawable/facebook" />
+                    <Button
+                        android:id="@+id/EditDIRC"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:onClick="onLogin"
+                        android:text="@string/text_Login" />
 
-            </LinearLayout>
+                    <Button
+                        android:id="@+id/btnRegisteremail"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:onClick="onRegisteremail"
+                        android:text="@string/text_Register" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                    <!--<Button
+                        android:id="@+id/EditRegister"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:onClick="onRegister"
+                        android:text="@string/text_Register" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGoogle"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:onClick="onGoogle"
+                        android:text="@string/text_Google"
+                        app:icon="@drawable/google"
+                        app:iconPadding="@dimen/cardview_compat_inset_shadow"
+                        app:iconTintMode="multiply" />
+
+                    <!--<com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnface"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/text_Facebook"
+                        app:icon="@drawable/facebook" />-->
+
+                </LinearLayout>
+
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
 
 
 
-                <Button
-                    android:id="@+id/btnRegisteremail"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:onClick="onRegisteremail"
-                    android:layout_margin="5dp"
-                    android:text="REGISTER EMAIL" />
-                <Button
-                    android:id="@+id/btnLoginemail"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:onClick="onLoginemail"
-                    android:text="LOGIN EMAIL" />
+                     <Button
+                         android:id="@+id/btnRegisteremail"
+                         android:layout_width="180dp"
+                         android:layout_height="50dp"
+                         android:onClick="onRegisteremail"
+                         android:layout_margin="5dp"
+                         android:text="REGISTER EMAIL" />
+                     <Button
+                         android:id="@+id/btnLoginemail"
+                         android:layout_width="180dp"
+                         android:layout_height="50dp"
+                         android:layout_margin="5dp"
+                         android:onClick="onLoginemail"
+                         android:text="LOGIN EMAIL" />
+
+                 </LinearLayout>-->
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
+    </ScrollView>
 
 </LinearLayout>

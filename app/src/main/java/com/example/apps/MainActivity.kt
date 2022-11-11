@@ -24,8 +24,6 @@ import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
-//prueba de guardado
-
 class MainActivity : AppCompatActivity() {
 
     private var EditCorreo: EditText? = null
@@ -45,8 +43,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun onLogin(BotonLogin: View) {
+    fun onLogin(view: View) {
         var correo: String = EditCorreo!!.text.toString()
+
         if (correo == "camilo@gmail.com") {
             if (EditPassword!!.text.toString() == "123") {
                 val intent = Intent(this, WelcomeActivity::class.java)
@@ -74,7 +73,11 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-        } else {
+        }
+        else if (EditCorreo!!.text!!.isNotEmpty())
+                {onLoginemail(view)}
+
+        else {
             /*val dialog = AlertDialog.Builder(this)
                 .setTitle("ERROR")
                 .setMessage("Email Invalite")
@@ -82,6 +85,23 @@ class MainActivity : AppCompatActivity() {
                 .show()*/
             Toast.makeText(this, getString(R.string.errorusername), Toast.LENGTH_LONG)
                 .show()
+        }
+
+    }
+    fun onLoginemail(view: View) {
+        title = "Autentication"
+        if (EditCorreo!!.text!!.isNotEmpty() && EditPassword!!.text!!.isNotEmpty()) {
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(
+                EditCorreo!!.text.toString(),
+                EditPassword!!.text.toString()
+            ).addOnCompleteListener {
+                if (it.isSuccessful) {
+                    showHome(it.result.user!!.email ?: "", ProviderType.BASIC)
+                } else {
+                    showAlert()
+
+                }
+            }
         }
 
     }
@@ -106,6 +126,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        else{onRegister(view)}
     }
 
     private fun showAlert() {
@@ -123,24 +144,6 @@ class MainActivity : AppCompatActivity() {
             putExtra("provider", provider.name)
         }
         startActivity(homeIntent)
-    }
-
-    fun onLoginemail(view: View) {
-        title = "Autentication"
-        if (EditCorreo!!.text!!.isNotEmpty() && EditPassword!!.text!!.isNotEmpty()) {
-            FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                EditCorreo!!.text.toString(),
-                EditPassword!!.text.toString()
-            ).addOnCompleteListener {
-                if (it.isSuccessful) {
-                    showHome(it.result.user!!.email ?: "", ProviderType.BASIC)
-                } else {
-                    showAlert()
-
-                }
-            }
-        }
-
     }
 
     override fun onStart() {
@@ -212,8 +215,5 @@ class MainActivity : AppCompatActivity() {
                 dialog.show()
             }
         }
-
-
     }
-
-   }
+}
