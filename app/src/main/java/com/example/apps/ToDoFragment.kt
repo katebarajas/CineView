@@ -64,7 +64,7 @@ class ToDoFragment : Fragment() {
     fun updateList(){
         val db = ToDoDatabase.getDatabase(requireActivity())
         val toDoDAD = db.todoDao()
-        runBlocking {
+        /*runBlocking {
             launch {
                 var result= toDoDAD.getAllTasks()
                 var i=0
@@ -81,7 +81,7 @@ class ToDoFragment : Fragment() {
                 }
                 myAdapter.notifyDataSetChanged()
             }
-        }
+        }*/
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

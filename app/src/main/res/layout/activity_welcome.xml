@@ -60,7 +60,7 @@
                     android:id="@+id/btnCerrar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cerrar Sesion"/>
+                    android:text="Cerrar Sesión"/>
 
 
             </LinearLayout>
