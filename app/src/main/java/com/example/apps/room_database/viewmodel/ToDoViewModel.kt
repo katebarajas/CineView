@@ -7,7 +7,6 @@ import com.example.apps.room_database.repository.ToDoRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import kotlin.contracts.Returns
 
 class ToDoViewModel(private val repository: ToDoRepository): ViewModel() {
     var tasks: List<ToDo>?=null
