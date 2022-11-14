@@ -12,11 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
-import com.example.apps.room_database.ToDo
 import com.example.apps.room_database.ToDoDatabase
 import com.example.apps.room_database.repository.ToDoRepository
 import com.example.apps.room_database.viewmodel.ToDoViewModel
-import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -27,9 +25,9 @@ class ToDoFragment : Fragment() {
     var myTaskTimes : ArrayList<String> = ArrayList()
     var myTaskPlaces : ArrayList<String> = ArrayList()
     var myTaskIds : ArrayList<String> = ArrayList()
-
-    private lateinit var todoviewmodel:ToDoViewModel
-    private lateinit var todorepository:ToDoRepository
+    var info: Bundle= Bundle()
+    private lateinit var toDoViewModel: ToDoViewModel
+    private lateinit var toDoRepository: ToDoRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,52 +65,53 @@ class ToDoFragment : Fragment() {
 
     }
 
+
     fun updateList(){
         val db = ToDoDatabase.getDatabase(requireActivity())
-        val todoDAO = db.todoDao()
-        val dbFirebase = FirebaseFirestore.getInstance()
-
-        todorepository = ToDoRepository(todoDAO)
-        todoviewmodel = ToDoViewModel(todorepository)
-
-        var result= todoviewmodel.getAllTasks()
-        result.invokeOnCompletion {
-            var theTasks = todoviewmodel.getTheTasks()
-        if (theTasks!!.size!=0){
-            var i=0
-            myTaskTitles.clear()
-            myTaskTimes.clear()
-            myTaskPlaces.clear()
-
-            while (i< theTasks!!.size){
-                myTaskTitles.add(theTasks[i].title)
-                myTaskTimes.add(theTasks[i].time)
-                myTaskPlaces.add(theTasks[i].place)
-                i++
-            }
-            myAdapter.notifyDataSetChanged()
-        } else {
-
-            var tasks = mutableListOf<ToDo>()
-            dbFirebase.collection(("ToDo")).get().addOnSuccessListener {
-                var docs = it.documents
-                if(docs.size != 0){
-                    var i=0
-                    while (i<docs.size)
-                        myTaskTitles.add(docs[i].get("title") as String)
-                    myTaskTimes.add(docs[i].get("time") as String)
-                    myTaskPlaces.add(docs[i].get("place") as String)
+        val toDoDAO = db.todoDao()
+        /*runBlocking {
+            launch {
+                var result= toDoDAD.getAllTasks()
+                var i=0
+                myTaskTitles.clear()
+                myTaskTimes.clear()
+                myTaskPlaces.clear()
+                myTaskIds.clear()
+                while (i< result.size){
+                    myTaskTitles.add(result[i].title.toString())
+                    myTaskTimes.add(result[i].time.toString())
+                    myTaskPlaces.add(result[i].place.toString())
+                    myTaskIds.add(result[i].id.toString())
                     i++
                 }
-                todoviewmodel.insertTasks(tasks)
                 myAdapter.notifyDataSetChanged()
             }
+        }*/
+
+        toDoRepository= ToDoRepository(toDoDAO)
+        toDoViewModel= ToDoViewModel(toDoRepository)
+
+        var result = toDoViewModel.getAllTask()
+        result.invokeOnCompletion {
+            var theTask = toDoViewModel.getTheTasks()
+            if(theTask!!.size!=0){
+                var i=0
+                myTaskTitles.clear()
+                myTaskTimes.clear()
+                myTaskPlaces.clear()
+                myTaskIds.clear()
+                while (i< theTask.size){
+                    myTaskTitles.add(theTask[i].title.toString())
+                    myTaskTimes.add(theTask[i].time.toString())
+                    myTaskPlaces.add(theTask[i].place.toString())
+                    myTaskIds.add(theTask[i].id.toString())
+                    i++
+                }
+                myAdapter.notifyDataSetChanged()
 
             }
         }
-
-        }
-
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(requestCode==0){
@@ -123,4 +122,7 @@ class ToDoFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    }
+
+}
+
+

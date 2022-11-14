@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(entities = arrayOf(ToDo::class), version = 1)
 abstract class ToDoDatabase : RoomDatabase() {
-    abstract fun todoDao() : ToDoDAD
+    abstract fun todoDao() : ToDoDAO
     companion object{
         @Volatile
         private var INSTANCE : ToDoDatabase?=null

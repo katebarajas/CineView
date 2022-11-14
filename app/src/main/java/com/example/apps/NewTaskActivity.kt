@@ -66,6 +66,15 @@ class NewTaskActivity : AppCompatActivity() {
                         finish()
                     }
                 }else{
+                    dbFirebase.collection("ToDo").document(id)
+                        .set(
+                            hashMapOf(
+                                "title" to title,
+                                "time" to time,
+                                "place" to place
+                            )
+
+                        )
                     todoDAO.updateTask(task)
                     finish()
                 }
