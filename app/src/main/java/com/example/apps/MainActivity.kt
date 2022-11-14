@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     private var EditPassword: TextInputEditText? = null
     private var authLayout: LinearLayout? = null
     private val GOOGLE_SIGN_IN = 100
+    private var textviewpwd: TextView?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,8 +40,15 @@ class MainActivity : AppCompatActivity() {
         EditCorreo = findViewById(R.id.EditCorreo)
         EditPassword = findViewById(R.id.EditPassword)
         authLayout = findViewById(R.id.authLayout)
+        textviewpwd= findViewById(R.id.textviewforgetpwd)
 
         session()
+
+        textviewpwd!!.setOnClickListener {
+            val intent= Intent(this,ForgetPasswordActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 

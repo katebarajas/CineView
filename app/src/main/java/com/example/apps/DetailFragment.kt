@@ -62,7 +62,8 @@ class DetailFragment: Fragment() {
 
             val negativeButton = { _: DialogInterface, _: Int -> }
             val positiveButton = { dialog: DialogInterface, which: Int -> }
-                val builder = AlertDialog.Builder(requireContext())
+
+                val builder = AlertDialog.Builder(requireActivity())
                 builder.setTitle("Delete Task")
                 builder.setMessage("Realmente quieres borrar esta tarea?")
                 builder.setPositiveButton("ok", positiveButton)
