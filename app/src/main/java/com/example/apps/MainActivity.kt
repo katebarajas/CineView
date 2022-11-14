@@ -173,7 +173,7 @@ class MainActivity : AppCompatActivity() {
         onBackPressed()
 
     }
-     fun onGoogle(btngoogle: View) {
+    fun onGoogle(btngoogle: View) {
         val googleConfig =
             GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
