@@ -11,7 +11,8 @@ import kotlinx.coroutines.launch
 class ToDoViewModel(private val repository: ToDoRepository): ViewModel() {
     var tasks: List<ToDo>?=null
     fun getAllTasks(): Job {
-        return viewModelScope.async { tasks = repository.getAllTasks() }
+        return viewModelScope.async {
+            tasks = repository.getAllTasks() }
     }
     fun getTheTasks(): List<ToDo>?{
         return tasks
