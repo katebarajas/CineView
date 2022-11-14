@@ -4,12 +4,12 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.security.identity.AccessControlProfileId
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import com.example.apps.room_database.ToDo
 import com.example.apps.room_database.ToDoDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -50,6 +50,7 @@ class NewTaskActivity : AppCompatActivity() {
         val db = ToDoDatabase.getDatabase(this)
         val todoDAO = db.todoDao()
         val task = ToDo(id.toInt(),title, time, place)
+        val dbFirebase = FirebaseFirestore.getInstance()
         runBlocking {
             launch {
 
@@ -57,6 +58,10 @@ class NewTaskActivity : AppCompatActivity() {
                     var result = todoDAO.insertTask(task)
                     if (result!=1L)
                     {
+                        dbFirebase.collection("ToDo").document(result.toString()).set(
+                            hashMapOf("title" to editTextTitle.text.toString(),"time" to editTextTime.text.toString(),
+                            "place" to editTextPlace.text.toString(), "id" to editTextId.text.toString())
+                        )
                         setResult(Activity.RESULT_OK)
                         finish()
                     }
