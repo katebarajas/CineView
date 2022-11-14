@@ -38,7 +38,7 @@ class NewTaskActivity : AppCompatActivity() {
             editTextId.setText(this.intent.getStringExtra("id"))
             btnSavetask.setText("Edit Task")
         }
-
+0
     }
 
     fun onSavesTask(view: View) {
