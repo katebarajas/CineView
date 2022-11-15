@@ -61,25 +61,25 @@ class DetailFragment: Fragment() {
             val task = ToDo(id!!.toInt(), tarea!!.toString(),hora!!.toString(),lugar!!.toString())
 
             val negativeButton = { _: DialogInterface, _: Int -> }
-            val positiveButton = { dialog: DialogInterface, which: Int -> }
-
-                val builder = AlertDialog.Builder(requireActivity())
-                builder.setTitle("Delete Task")
-                builder.setMessage("Realmente quieres borrar esta tarea?")
-                builder.setPositiveButton("ok", positiveButton)
-                builder.setNegativeButton("cancelar",negativeButton)
-                val dialog: AlertDialog = builder.create()
-                dialog.show()
-
-            runBlocking {
-                launch {
-                    toDoDAO.deleteTask(task)
-                    dbFirebase.collection("ToDo").document(id).delete()
-
+            val positiveButton = { dialog: DialogInterface, which: Int ->
+                runBlocking {
+                    launch {
+                        toDoDAO.deleteTask(task)
+                        dbFirebase.collection("ToDo").document(id).delete()
+                    }
                 }
+                val principal = Intent(requireActivity(),ToDoActivity::class.java)
+                startActivity(principal)
             }
-            val principal=Intent(requireContext(), ToDoActivity::class.java)
-            startActivity(principal)
+            val dialog=AlertDialog.Builder(requireActivity())
+                .setTitle("Delete Task")
+                .setMessage("realmente quiere eliminar la tarea")
+                .setPositiveButton("ok", positiveButton)
+                .setNegativeButton("Cancelar", negativeButton)
+                .create()
+                .show()
+
+
         }
 
         return fragmento
