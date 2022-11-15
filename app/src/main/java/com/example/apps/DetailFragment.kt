@@ -73,9 +73,9 @@ class DetailFragment: Fragment() {
             }
             val dialog=AlertDialog.Builder(requireActivity())
                 .setTitle("Delete Task")
-                .setMessage("Realmente quiere eliminar la tarea")
+                .setMessage("You really want to delete the task?")
                 .setPositiveButton("ok", positiveButton)
-                .setNegativeButton("Cancelar", negativeButton)
+                .setNegativeButton("Cancel", negativeButton)
                 .create()
                 .show()
 
