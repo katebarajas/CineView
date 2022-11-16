@@ -19,6 +19,7 @@
         android:layout_gravity="center"
         android:orientation="vertical">
     <ImageView
+        android:id="@+id/detailImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/popeta2"/>
@@ -34,35 +35,35 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:text="Tarea"/>
+        android:text="@string/Task"/>
     <TextView
         android:id="@+id/tvHora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:text="Hora"/>
+        android:text="@string/EdTx_time"/>
     <TextView
         android:id="@+id/tvLugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:text="Lugar"/>
+        android:text="@string/EdTx_place"/>
 
     <Button
         android:id="@+id/btnEdit"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Edit Task"/>
+        android:text="@string/Btn_edit_task"/>
 
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Delete Task"/>
+        android:text="@string/Btn_delete_task"/>
 
     </LinearLayout>
     </ScrollView>

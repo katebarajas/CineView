@@ -47,4 +47,15 @@
     <string name="btn_back">back</string>
     <string name="forget_password">Forget Password</string>
     <string name="select_an_image">Select an Image</string>
+    <string name="Btn_save">Save</string>
+    <string name="Btn_delete_task">Delete Task</string>
+    <string name="Btn_edit_task">Edit Task</string>
+    <string name="EdTx_place">Place</string>
+    <string name="EdTx_time">Time</string>
+    <string name="EdTx_title">Title</string>
+    <string name="Task">Task</string>
+    <string name="Alert_mss_Delete">You really want to delete the task?</string>
+    <string name="alert_auntentication_N">An error occurred authenticating the user</string>
+    <string name="Alert_btn_Cancel">Cancel</string>
+    <string name="alert_btn_ok">Ok</string>
 </resources>

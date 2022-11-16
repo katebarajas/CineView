@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
                 EditPassword!!.text.toString()
             ).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    Toast.makeText(this, "Correcto", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, getString(R.string.alert_register_right), Toast.LENGTH_LONG).show()
                 } else {
                     showAlert()
 
@@ -141,8 +141,8 @@ class MainActivity : AppCompatActivity() {
     private fun showAlert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error autenticando el usuario")
-        builder.setPositiveButton("Aceptar", null)
+        builder.setMessage(getString(R.string.alert_auntentication_N))
+        builder.setPositiveButton(getString(R.string.alert_btn_ok), null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -219,7 +219,7 @@ class MainActivity : AppCompatActivity() {
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("Error")
                 builder.setMessage(e.toString())
-                builder.setPositiveButton("Aceptar", null)
+                builder.setPositiveButton(getString(R.string.alert_btn_ok), null)
                 val dialog:AlertDialog= builder.create()
                 dialog.show()
             }
