@@ -39,7 +39,7 @@ class NewTaskActivity : AppCompatActivity() {
         binding = ActivityNewTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnCargarImg.setOnClickListener { requestPermissions() }
+        /*binding.btnCargarImg.setOnClickListener { requestPermissions() }*/
 
         editTextTitle=findViewById(R.id.editTextTitle)
         editTextTime=findViewById(R.id.editTextTime)
@@ -48,8 +48,8 @@ class NewTaskActivity : AppCompatActivity() {
         btnSavetask=findViewById(R.id.btnSavetask)
 
 
-        imagenId= findViewById(R.id.imagenId)
-        //btnCargarImg=findViewById(R.id.btnCargarImg)
+        /*imagenId= findViewById(R.id.imagenId)
+        //btnCargarImg=findViewById(R.id.btnCargarImg)*/
 
         if(this.intent.getStringExtra("id")!=null){
             editTextTitle.setText(this.intent.getStringExtra("tarea"))
@@ -61,7 +61,7 @@ class NewTaskActivity : AppCompatActivity() {
 
     }
 
-    private fun requestPermissions() {
+    /*private fun requestPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             when{
                 ContextCompat.checkSelfPermission(
@@ -101,16 +101,16 @@ class NewTaskActivity : AppCompatActivity() {
 
     private fun pickPhotoFromGallery() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
-        intent.type = "image/*"
+        intent.type = "image"
         startForActivityGallery.launch(intent)
-    }
+    }*/
 
     fun onSavesTask(view: View) {
         var title:String = editTextTitle.text.toString()
         var time:String = editTextTime.text.toString()
         var place: String = editTextPlace.text.toString()
         var id: String = editTextId.text.toString()
-        var image:String = imagenId. toString()
+        /*var image:String = imagenId. toString()*/
 
         val db = ToDoDatabase.getDatabase(this)
         val todoDAO = db.todoDao()
