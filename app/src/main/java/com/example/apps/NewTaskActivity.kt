@@ -27,29 +27,17 @@ class NewTaskActivity : AppCompatActivity() {
     lateinit var editTextId: EditText
     lateinit var btnSavetask: Button
 
-    private lateinit var binding: ActivityNewTaskBinding
-    lateinit var imagenId : ImageView
-    //lateinit var btnCargarImg: Button
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_new_task)
-        binding = ActivityNewTaskBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        /*binding.btnCargarImg.setOnClickListener { requestPermissions() }*/
+        setContentView(R.layout.activity_new_task)
 
         editTextTitle=findViewById(R.id.editTextTitle)
         editTextTime=findViewById(R.id.editTextTime)
         editTextPlace=findViewById(R.id.editTextPlace)
         editTextId= findViewById(R.id.editTextID2)
         btnSavetask=findViewById(R.id.btnSavetask)
-
-
-        /*imagenId= findViewById(R.id.imagenId)
-        //btnCargarImg=findViewById(R.id.btnCargarImg)*/
 
         if(this.intent.getStringExtra("id")!=null){
             editTextTitle.setText(this.intent.getStringExtra("tarea"))
@@ -61,56 +49,12 @@ class NewTaskActivity : AppCompatActivity() {
 
     }
 
-    /*private fun requestPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            when{
-                ContextCompat.checkSelfPermission(
-                    this,
-                    android.Manifest.permission.READ_EXTERNAL_STORAGE
-                ) == PackageManager.PERMISSION_GRANTED -> {
-                    pickPhotoFromGallery()
-                }
-                else-> requestPermissionLauncher.launch(android.Manifest.permission.READ_EXTERNAL_STORAGE)
-            }
-        }else{
-            pickPhotoFromGallery()
-        }
-    }
-
-    private val requestPermissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ){isGranted->
-
-        if (isGranted){
-            pickPhotoFromGallery()
-        }else{
-            Toast.makeText(this,"You need to enable the permission", Toast.LENGTH_LONG)
-                .show()
-        }
-
-    }
-
-    private val startForActivityGallery = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ){ result->
-        if(result.resultCode == Activity.RESULT_OK){
-            val data = result.data?.data
-            imagenId.setImageURI(data)
-        }
-    }
-
-    private fun pickPhotoFromGallery() {
-        val intent = Intent(Intent.ACTION_GET_CONTENT)
-        intent.type = "image"
-        startForActivityGallery.launch(intent)
-    }*/
-
     fun onSavesTask(view: View) {
         var title:String = editTextTitle.text.toString()
         var time:String = editTextTime.text.toString()
         var place: String = editTextPlace.text.toString()
         var id: String = editTextId.text.toString()
-        /*var image:String = imagenId. toString()*/
+
 
         val db = ToDoDatabase.getDatabase(this)
         val todoDAO = db.todoDao()

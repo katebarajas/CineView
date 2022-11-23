@@ -21,13 +21,15 @@
             android:layout_height="0dp"
             android:layout_weight="3"
             android:orientation="vertical">
+
             <Button
                 android:id="@+id/btnProductoAW"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Productos"
-                android:layout_gravity="right"></Button>
-        <LinearLayout
+                android:layout_gravity="center"
+                android:text="@string/to_rent"></Button>
+
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="5dp"
@@ -143,7 +145,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/default_empty">
+                android:src="@drawable/black11">
 
             </ImageView>
 
@@ -187,7 +189,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/default_empty">
+                android:src="@drawable/avatar">
 
             </ImageView>
 
@@ -196,7 +198,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/default_empty">
+                android:src="@drawable/tren">
 
             </ImageView>
 

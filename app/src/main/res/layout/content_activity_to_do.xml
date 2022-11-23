@@ -19,7 +19,6 @@
             app:titleTextColor="@color/white"
             android:background="@color/Blue_800"
             android:elevation="4dp"
-            app:title="@string/user"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
         <androidx.fragment.app.FragmentContainerView

@@ -6,20 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="15dp"
+    android:background="@drawable/fondos"
+    android:padding="40dp"
     tools:context=".NewTaskActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="15dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextID2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="0"
+        android:layout_margin="10dp"
         android:visibility="gone"
         />
 
@@ -28,6 +29,7 @@
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:hint="@string/EdTx_title"
         />
 
@@ -35,6 +37,7 @@
         android:id="@+id/editTextTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:hint="@string/EdTx_time"
         />
 
@@ -42,6 +45,7 @@
         android:id="@+id/editTextPlace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:hint="@string/EdTx_place"
         />
 
@@ -52,28 +56,7 @@
         android:layout_marginTop="25dp"
         android:src="@drawable/default_empty" />-->
 
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <ImageView
-            android:id="@+id/imagenId"
-            android:layout_width="226dp"
-            android:layout_height="194dp"
-            app:srcCompat="@drawable/default_empty" />
-
-        <Button
-            android:id="@+id/btnCargarImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onCargarImagen"
-            android:text="@string/select_an_image"
-            style="@style/Base.CardView"/>
-    </LinearLayout>
--->
-    <Button
+-->    <Button
         android:id="@+id/btnSavetask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,6 +65,5 @@
         android:onClick="onSavesTask"
         android:text="@string/Btn_save" />
 
-</LinearLayout>
 
 </LinearLayout>

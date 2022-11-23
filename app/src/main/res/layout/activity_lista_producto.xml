@@ -6,13 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="60dp"
+    android:background="@drawable/fondos"
     tools:context=".ListaProductoActivity">
+
     <ListView
         android:id="@+id/listaP"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_anchor="@id/listaP"
-        app:layout_anchorGravity="center"/>
+        app:layout_anchorGravity="center" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/flotinbuttonALP"
         android:layout_width="wrap_content"

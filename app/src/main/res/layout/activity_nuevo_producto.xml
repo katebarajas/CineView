@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
+    android:background="@drawable/fondos"
+    android:padding="40dp"
     tools:context=".NuevoProductoActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"/>
 
         <EditText
             android:id="@+id/editTextNombreNPA"
@@ -19,6 +22,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nombre"
+            android:textStyle="bold"
             android:inputType="textPersonName" />
 
         <EditText
@@ -26,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textStyle="bold"
             android:hint="Precio"
             android:inputType="number" />
 
@@ -34,8 +39,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textStyle="bold"
             android:hint="Detalle"
             android:inputType="textMultiLine" />
+
+        <ImageView
+            android:id="@+id/imagenSelectNPA"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:src="@drawable/placeholder"/>
 
         <Button
             android:id="@+id/buttonNPA"
@@ -44,6 +57,5 @@
             android:layout_marginHorizontal="100dp"
             android:layout_marginTop="20dp"
             android:text="@string/Btn_save" />
-    </LinearLayout>
 
 </LinearLayout>

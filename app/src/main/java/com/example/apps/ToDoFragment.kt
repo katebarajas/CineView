@@ -55,7 +55,7 @@ class ToDoFragment : Fragment() {
         info.putStringArrayList("titles", myTaskTitles)
         info.putStringArrayList("times", myTaskTimes)
         info.putStringArrayList("places", myTaskPlaces)
-        info.putStringArrayList("id", myTaskIds)
+        info.putStringArrayList("ids", myTaskIds)
         listRecyclerView=requireView().findViewById(R.id.recyclerToDoList)
         myAdapter = MyTaskListAdapter(activity as AppCompatActivity,info)
         listRecyclerView.setHasFixedSize(true)

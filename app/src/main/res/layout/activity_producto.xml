@@ -5,29 +5,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondos"
+    android:padding="40dp"
     tools:context=".ProductoActivity"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"/>
     <TextView
         android:id="@+id/textViewNombreAP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Nombre"/>
     <TextView
         android:id="@+id/textViewPrecioAP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Precio"/>
     <TextView
         android:id="@+id/textViewDetalleAP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Detalle"/>
     <ImageView
-        android:id="@+id/imageViewPA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imagenViewPA"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetalleAP"
-        app:srcCompat="@drawable/ic_launcher_background"/>
-
+        app:srcCompat="@drawable/ic_launcher_background" />
 </LinearLayout>

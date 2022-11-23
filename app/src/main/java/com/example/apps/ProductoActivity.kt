@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.example.apps.room_database.AdminProducto.ImagenController
 import com.example.apps.room_database.AdminProducto.Producto
 import com.example.apps.room_database.AdminProducto.ProductoDatabase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -18,26 +19,29 @@ class ProductoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_producto)
+
         val producto = intent.getSerializableExtra("producto")as Producto
+        val imageUri = ImagenController.getImagenUri(this,producto.idProducto.toLong())
+        imagenViewPA.setImageURI(imageUri)
         textViewNombreAP.text = producto.nombre
-        textViewPrecioAP.text = "$${producto.precio}"
+        textViewPrecioAP.text  = "$${producto.precio}"
         textViewDetalleAP.text = producto.descripcion
-        imageViewPA.setImageResource(producto.imagen)
+        //imagenViewPA.setImageResource(producto.imagen)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.producto_menu,menu)
+        menuInflater.inflate(R.menu.producto_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val producto=intent.getSerializableExtra("producto")as Producto
-        val database= ProductoDatabase.getDatabase(this)
-        val dbFirebase= FirebaseFirestore.getInstance()
+        val producto = intent.getSerializableExtra("producto")as Producto
+        val database = ProductoDatabase.getDatabase(this)
+        val dbFirebase = FirebaseFirestore.getInstance()
         when(item.itemId){
-            R.id.edit_item->{
-                val intent= Intent(this,NuevoProductoActivity::class.java)
-                intent.putExtra("producto",producto)
+            R.id.edit_item ->{
+                val intent = Intent(this, NuevoProductoActivity::class.java)
+                intent.putExtra("producto", producto)
                 startActivity(intent)
             }
             R.id.delete_item->{
