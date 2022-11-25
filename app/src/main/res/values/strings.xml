@@ -59,4 +59,6 @@
     <string name="Alert_btn_Cancel">Cancel</string>
     <string name="alert_btn_ok">Ok</string>
     <string name="to_rent">To rent</string>
+    <string name="message_forgot_password">Forgot your password? Enter the email you used to sign up and we will send you a new one, check the spam </string>
+    <string name="forgot_password">Forgot Password</string>
 </resources>

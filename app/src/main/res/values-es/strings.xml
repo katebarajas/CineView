@@ -58,4 +58,7 @@
     <string name="Alert_btn_Cancel">Cancelar</string>
     <string name="alert_btn_ok">Aceptar</string>
     <string name="to_rent">Para Alquilar</string>
+    <string name="message_forgot_password">Olvidaste la contraseña? ingrese el email que usa para entrar a su cuenta y se enviará una nueva contraseña, revise el spam </string>
+    <string name="forgot_password">olvido su contraseña</string>
+
 </resources>
