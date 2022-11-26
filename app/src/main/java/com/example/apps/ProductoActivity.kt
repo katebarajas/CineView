@@ -8,7 +8,11 @@ import android.view.MenuItem
 import com.example.apps.room_database.AdminProducto.ImagenController
 import com.example.apps.room_database.AdminProducto.Producto
 import com.example.apps.room_database.AdminProducto.ProductoDatabase
+import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_producto.*
 import kotlinx.android.synthetic.main.item_producto.*
 import kotlinx.coroutines.CoroutineScope
@@ -49,6 +53,14 @@ class ProductoActivity : AppCompatActivity() {
                     database.productos().delete(producto)
                     dbFirebase.collection("Productos")
                         .document(producto.idProducto.toString()).delete()
+
+                    //borrar imagen en firebase
+                    val database = Firebase.database
+                    val myRef = database.getReference("Productos")
+                    val Folder: StorageReference = FirebaseStorage.getInstance().getReference()
+                        .child("imagen")
+                    val file_name = Folder.child(producto.idProducto.toString()).delete()
+
                     this@ProductoActivity.finish()
                 }
             }
