@@ -14,8 +14,7 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-        <style name="Theme.CineView.NoActionBar">
-        <item name="windowActionBar">false</item>
+        <style name="Theme.CineView.NoActionBar"><item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 </resources>
